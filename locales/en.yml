@@ -1,4 +1,4 @@
-app_name: Proche
+app_name: Qreeket
 
 invalid_language_code: Unsupported language code
 sms_send_failed: We were unable to send the SMS for some reason. Please try again later.

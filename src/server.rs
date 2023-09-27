@@ -35,12 +35,12 @@ impl SmsService for SmsServiceImpl {
         };
 
         // check if we are in dev mode
-        let is_dev = env::var("IS_DEV").expect("Error reading IS_DEV environment variable");
-        let is_dev = is_dev.parse::<bool>().unwrap_or(false);
-        if is_dev {
-            log::info!("Skipping sms send in dev mode");
-            return Ok(Response::new(()));
-        }
+        // let is_dev = env::var("IS_DEV").expect("Error reading IS_DEV environment variable");
+        // let is_dev = is_dev.parse::<bool>().unwrap_or(false);
+        // if is_dev {
+        //     log::info!("Skipping sms send in dev mode");
+        //     return Ok(Response::new(()));
+        // }
 
         // check if phone number already exists
         let phone_number = request.into_inner();
@@ -144,12 +144,12 @@ impl SmsService for SmsServiceImpl {
         };
 
         // check if we are in dev mode
-        let is_dev = env::var("IS_DEV").expect("Error reading IS_DEV environment variable");
-        let is_dev = is_dev.parse::<bool>().unwrap_or(false);
-        if is_dev {
-            log::info!("Skipping sms verification in dev mode");
-            return Ok(Response::new(()));
-        }
+        // let is_dev = env::var("IS_DEV").expect("Error reading IS_DEV environment variable");
+        // let is_dev = is_dev.parse::<bool>().unwrap_or(false);
+        // if is_dev {
+        //     log::info!("Skipping sms verification in dev mode");
+        //     return Ok(Response::new(()));
+        // }
 
         let req = request.into_inner();
         let phone_number = req.phone_number;
